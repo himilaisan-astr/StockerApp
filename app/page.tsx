@@ -1,12 +1,10 @@
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
-import StockProfitSlider from "@/components/home/stock-profit-slider";
-import StockCarousel from "@/components/home/stock-carousel";
+import PennyStockCarousel from "@/components/home/penny-stocks/penny-stock-carousel";
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -98,7 +96,7 @@ export default async function Home() {
             title={title}
             description={description}
             demo={
-              title === "Beautiful, reusable components" ? (
+              title === "Built with financial freedom in mind" ? (
                 <ComponentGrid />
               ) : (
                 demo
@@ -114,19 +112,19 @@ export default async function Home() {
 
 const features = [
   {
-    title: "Beautiful, reusable components",
+    title: "Built with financial freedom in mind",
     description:
-      "Pre-built beautiful, a11y-first components, powered by [Tailwind CSS](https://tailwindcss.com), [Radix UI](https://www.radix-ui.com), and [Framer Motion](https://framer.com/motion). Used in production on [Dub.co](https://dub.co).",
+      "Let us do the investing, and you sit back and earn money",
     large: true,
   },
   {
-    title: "",
+    title: "Penny Stocks",
     description:
-      "",
-    demo: <StockCarousel/>
+      "For people with little money, wanting low fund high return also high risks",
+    demo: <PennyStockCarousel/>
   },
   {
-    title: "One-click Deploy",
+    title: "Cryptos",
     description:
       "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
     demo: (
@@ -142,7 +140,7 @@ const features = [
     ),
   },
   {
-    title: "Built-in Auth",
+    title: "Regular Stocks",
     description:
       "Precedent comes with authentication via [Clerk](https://clerk.com/)",
     demo: (
@@ -152,7 +150,7 @@ const features = [
     ),
   },
   {
-    title: "Hooks, utilities, and more",
+    title: "Real Estate",
     description:
       "Precedent offers a collection of hooks, utilities, and `@vercel/og`",
     demo: (

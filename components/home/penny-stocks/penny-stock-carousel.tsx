@@ -35,7 +35,7 @@ const stockList = [
   }
 ]
 
-const StockCarousel: React.FC = () => {
+const PennyStockCarousel: React.FC = () => {
   const [emblaRef] = useEmblaCarousel({ loop: false, align: "center" })
 
   return (
@@ -51,4 +51,4 @@ const StockCarousel: React.FC = () => {
   )
 }
 
-export default StockCarousel
+export default PennyStockCarousel
